@@ -7,8 +7,16 @@
 package pos_software_systems;
 
 import java.awt.Dimension;
+import java.awt.HeadlessException;
 import java.awt.Toolkit;
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 
 /**
@@ -60,13 +68,18 @@ public class View_POS extends javax.swing.JFrame {
         lbl_FoodMenu = new javax.swing.JLabel();
         btn_KidsMenu = new javax.swing.JButton();
         Card_Drinks = new javax.swing.JPanel();
-        btn_CokeDrinks = new javax.swing.JButton();
+        btn_FountainDrinks = new javax.swing.JButton();
         btn_SweetTea = new javax.swing.JButton();
         btn_Coffee = new javax.swing.JButton();
         btn_Milkshake = new javax.swing.JButton();
         btn_ChocDrink = new javax.swing.JButton();
         btn_Lemonade = new javax.swing.JButton();
         lbl_DrinksMenu = new javax.swing.JLabel();
+        Panel_DrinkSize = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         Card_Extras = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         Card_CheckOut = new javax.swing.JPanel();
@@ -90,7 +103,6 @@ public class View_POS extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         list_Order = new javax.swing.JList();
         jButton11 = new javax.swing.JButton();
@@ -232,7 +244,7 @@ public class View_POS extends javax.swing.JFrame {
                 .addGroup(Card_FoodMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_Wraps, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_KidsMenu))
-                .addContainerGap(269, Short.MAX_VALUE))
+                .addContainerGap(289, Short.MAX_VALUE))
         );
 
         Card_FoodMenuLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btn_Burgers, btn_KidsMenu, btn_Sandwiches, btn_Sides, btn_Wings, btn_Wraps});
@@ -241,11 +253,11 @@ public class View_POS extends javax.swing.JFrame {
 
         Card_Drinks.setBackground(new java.awt.Color(255, 255, 204));
 
-        btn_CokeDrinks.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btn_CokeDrinks.setText("Fountain");
-        btn_CokeDrinks.addActionListener(new java.awt.event.ActionListener() {
+        btn_FountainDrinks.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btn_FountainDrinks.setText("Fountain Drinks");
+        btn_FountainDrinks.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_CokeDrinksActionPerformed(evt);
+                btn_FountainDrinksActionPerformed(evt);
             }
         });
 
@@ -272,6 +284,57 @@ public class View_POS extends javax.swing.JFrame {
         lbl_DrinksMenu.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lbl_DrinksMenu.setText("Drinks Menu");
 
+        Panel_DrinkSize.setBackground(new java.awt.Color(255, 255, 204));
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton1.setText("REG");
+
+        jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton2.setText("LARGE");
+
+        jButton3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton3.setText("KIDS");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel2.setText("Size");
+
+        javax.swing.GroupLayout Panel_DrinkSizeLayout = new javax.swing.GroupLayout(Panel_DrinkSize);
+        Panel_DrinkSize.setLayout(Panel_DrinkSizeLayout);
+        Panel_DrinkSizeLayout.setHorizontalGroup(
+            Panel_DrinkSizeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_DrinkSizeLayout.createSequentialGroup()
+                .addGroup(Panel_DrinkSizeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel_DrinkSizeLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2))
+                    .addGroup(Panel_DrinkSizeLayout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(Panel_DrinkSizeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton3)
+                            .addComponent(jButton2))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        Panel_DrinkSizeLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton1, jButton2, jButton3});
+
+        Panel_DrinkSizeLayout.setVerticalGroup(
+            Panel_DrinkSizeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_DrinkSizeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(Panel_DrinkSizeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton3)
+                .addContainerGap(26, Short.MAX_VALUE))
+        );
+
+        Panel_DrinkSizeLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jButton2, jButton3});
+
         javax.swing.GroupLayout Card_DrinksLayout = new javax.swing.GroupLayout(Card_Drinks);
         Card_Drinks.setLayout(Card_DrinksLayout);
         Card_DrinksLayout.setHorizontalGroup(
@@ -280,22 +343,26 @@ public class View_POS extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(Card_DrinksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Card_DrinksLayout.createSequentialGroup()
-                        .addComponent(btn_CokeDrinks, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_Milkshake)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_Coffee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(Card_DrinksLayout.createSequentialGroup()
-                        .addComponent(btn_SweetTea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_ChocDrink, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_Lemonade))
-                    .addComponent(lbl_DrinksMenu))
-                .addContainerGap(17, Short.MAX_VALUE))
+                        .addGroup(Card_DrinksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Card_DrinksLayout.createSequentialGroup()
+                                .addComponent(btn_FountainDrinks, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_Milkshake)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_Coffee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(Card_DrinksLayout.createSequentialGroup()
+                                .addComponent(btn_SweetTea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_ChocDrink, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_Lemonade))
+                            .addComponent(lbl_DrinksMenu))
+                        .addGap(0, 2, Short.MAX_VALUE))
+                    .addComponent(Panel_DrinkSize, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
-        Card_DrinksLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btn_ChocDrink, btn_Coffee, btn_CokeDrinks, btn_Lemonade, btn_Milkshake, btn_SweetTea});
+        Card_DrinksLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btn_ChocDrink, btn_Coffee, btn_FountainDrinks, btn_Lemonade, btn_Milkshake, btn_SweetTea});
 
         Card_DrinksLayout.setVerticalGroup(
             Card_DrinksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -304,7 +371,7 @@ public class View_POS extends javax.swing.JFrame {
                 .addComponent(lbl_DrinksMenu)
                 .addGap(18, 18, 18)
                 .addGroup(Card_DrinksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_CokeDrinks, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_FountainDrinks, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_Milkshake, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
                     .addComponent(btn_Coffee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -312,10 +379,12 @@ public class View_POS extends javax.swing.JFrame {
                     .addComponent(btn_SweetTea, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
                     .addComponent(btn_ChocDrink, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_Lemonade))
-                .addContainerGap(400, Short.MAX_VALUE))
+                .addGap(73, 73, 73)
+                .addComponent(Panel_DrinkSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(95, Short.MAX_VALUE))
         );
 
-        Card_DrinksLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btn_ChocDrink, btn_Coffee, btn_CokeDrinks, btn_Lemonade, btn_Milkshake, btn_SweetTea});
+        Card_DrinksLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btn_ChocDrink, btn_Coffee, btn_FountainDrinks, btn_Lemonade, btn_Milkshake, btn_SweetTea});
 
         Panel_Cards.add(Card_Drinks, "card6");
 
@@ -339,7 +408,7 @@ public class View_POS extends javax.swing.JFrame {
             .addGroup(Card_ExtrasLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addContainerGap(654, Short.MAX_VALUE))
+                .addContainerGap(674, Short.MAX_VALUE))
         );
 
         Panel_Cards.add(Card_Extras, "card5");
@@ -435,12 +504,27 @@ public class View_POS extends javax.swing.JFrame {
 
         btn_item2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btn_item2.setText("Item 2");
+        btn_item2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_item2ActionPerformed(evt);
+            }
+        });
 
         btn_item3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btn_item3.setText("Item 3");
+        btn_item3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_item3ActionPerformed(evt);
+            }
+        });
 
         btn_item7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btn_item7.setText("Item 7");
+        btn_item7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_item7ActionPerformed(evt);
+            }
+        });
 
         btn_item6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btn_item6.setText("Item 6");
@@ -452,9 +536,19 @@ public class View_POS extends javax.swing.JFrame {
 
         btn_item4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btn_item4.setText("Item 4");
+        btn_item4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_item4ActionPerformed(evt);
+            }
+        });
 
         btn_item5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btn_item5.setText("Item 5");
+        btn_item5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_item5ActionPerformed(evt);
+            }
+        });
 
         lbl_Burgers.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lbl_Burgers.setText("Burgers");
@@ -502,7 +596,7 @@ public class View_POS extends javax.swing.JFrame {
                     .addComponent(btn_item6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_item7)
-                .addContainerGap(255, Short.MAX_VALUE))
+                .addContainerGap(275, Short.MAX_VALUE))
         );
 
         Card_BurgersLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btn_item1, btn_item2, btn_item3, btn_item4, btn_item5, btn_item6, btn_item7});
@@ -532,14 +626,10 @@ public class View_POS extends javax.swing.JFrame {
         jButton8.setText("jButton8");
         Panel_Employee_works.add(jButton8);
 
-        jButton9.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jButton9.setText("jButton9");
-        Panel_Employee_works.add(jButton9);
-
         list_Order.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Order:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Unicode MS", 0, 14))); // NOI18N
         list_Order.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
         list_Order.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            String[] strings = { "<click menu >" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
@@ -547,7 +637,12 @@ public class View_POS extends javax.swing.JFrame {
 
         jButton11.setBackground(new java.awt.Color(204, 0, 0));
         jButton11.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jButton11.setText("VOID ITEM");
+        jButton11.setText("REMOVE ITEM");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jButton13.setBackground(new java.awt.Color(0, 51, 204));
         jButton13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -562,22 +657,21 @@ public class View_POS extends javax.swing.JFrame {
         Panel_Parent.setLayout(Panel_ParentLayout);
         Panel_ParentLayout.setHorizontalGroup(
             Panel_ParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Panel_Employee_works, javax.swing.GroupLayout.DEFAULT_SIZE, 1093, Short.MAX_VALUE)
             .addGroup(Panel_ParentLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(Panel_ParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel_ParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Panel_Buttons, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Panel_Cards, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(Panel_ParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2)
                     .addGroup(Panel_ParentLayout.createSequentialGroup()
-                        .addComponent(Panel_Cards, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(Panel_ParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2)
-                            .addGroup(Panel_ParentLayout.createSequentialGroup()
-                                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jScrollPane1))))
+                        .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1))
                 .addContainerGap())
-            .addComponent(Panel_Employee_works, javax.swing.GroupLayout.DEFAULT_SIZE, 1093, Short.MAX_VALUE)
         );
         Panel_ParentLayout.setVerticalGroup(
             Panel_ParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -586,16 +680,17 @@ public class View_POS extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(Panel_ParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Panel_ParentLayout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Panel_Cards, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Panel_Buttons, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE))
+                    .addGroup(Panel_ParentLayout.createSequentialGroup()
+                        .addComponent(jScrollPane2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(Panel_ParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(Panel_Cards, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Panel_Buttons, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                            .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(8, 8, 8))
         );
 
@@ -624,7 +719,9 @@ public class View_POS extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Panel_Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(Panel_Background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 2, Short.MAX_VALUE))
         );
 
         pack();
@@ -679,7 +776,9 @@ public class View_POS extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_LemonadeActionPerformed
 
     private void btn_item6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_item6ActionPerformed
-        // TODO add your handling code here:
+        model1.addElement("Food Item #6");
+        list_Order.setModel(model1);
+        list_Order.setSelectedIndex(0);
     }//GEN-LAST:event_btn_item6ActionPerformed
 
     private void btn_CreditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CreditActionPerformed
@@ -688,9 +787,12 @@ public class View_POS extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btn_CreditActionPerformed
 
-    private void btn_CokeDrinksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CokeDrinksActionPerformed
+    private void btn_FountainDrinksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_FountainDrinksActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_CokeDrinksActionPerformed
+        model1.addElement("DRINK");
+        list_Order.setModel(model1);
+        list_Order.setSelectedIndex(0);
+    }//GEN-LAST:event_btn_FountainDrinksActionPerformed
 
     private void btn_DebitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_DebitActionPerformed
         // TODO add your handling code here:
@@ -710,13 +812,116 @@ public class View_POS extends javax.swing.JFrame {
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
         JOptionPane.showConfirmDialog(Card_FoodMenu, "Do you want to CANCEL this Order?");
+       
+        
     }//GEN-LAST:event_jButton12ActionPerformed
 
+    public View_POS(JPanel Card_Burgers, JPanel Card_CheckOut, JPanel Card_Drinks, JPanel Card_Extras, JPanel Card_FoodMenu, JPanel Panel_Background, JPanel Panel_Buttons, JPanel Panel_Cards, JPanel Panel_Employee_works, JPanel Panel_Parent, JButton btn_Burgers, JButton btn_Cash, JButton btn_Checkout, JButton btn_ChocDrink, JButton btn_Coffee, JButton btn_CokeDrinks, JButton btn_Credit, JButton btn_Debit, JButton btn_Drinks, JButton btn_Extras, JButton btn_GiftCard, JButton btn_KidsMenu, JButton btn_Lemonade, JButton btn_Menu, JButton btn_Milkshake, JButton btn_Sandwiches, JButton btn_Sides, JButton btn_SweetTea, JButton btn_Wings, JButton btn_Wraps, JButton btn_item1, JButton btn_item2, JButton btn_item3, JButton btn_item4, JButton btn_item5, JButton btn_item6, JButton btn_item7, JButton jButton11, JButton jButton12, JButton jButton13, JButton jButton4, JButton jButton5, JButton jButton6, JButton jButton7, JButton jButton8, JLabel jLabel1, JLabel jLabel3, JScrollPane jScrollPane1, JScrollPane jScrollPane2, JLabel lbl_Burgers, JLabel lbl_DrinksMenu, JLabel lbl_FoodMenu, JList list_Order, JTextArea rtb_total) throws HeadlessException {
+        this.Card_Burgers = Card_Burgers;
+        this.Card_CheckOut = Card_CheckOut;
+        this.Card_Drinks = Card_Drinks;
+        this.Card_Extras = Card_Extras;
+        this.Card_FoodMenu = Card_FoodMenu;
+        this.Panel_Background = Panel_Background;
+        this.Panel_Buttons = Panel_Buttons;
+        this.Panel_Cards = Panel_Cards;
+        this.Panel_Employee_works = Panel_Employee_works;
+        this.Panel_Parent = Panel_Parent;
+        this.btn_Burgers = btn_Burgers;
+        this.btn_Cash = btn_Cash;
+        this.btn_Checkout = btn_Checkout;
+        this.btn_ChocDrink = btn_ChocDrink;
+        this.btn_Coffee = btn_Coffee;
+        this.btn_FountainDrinks = btn_CokeDrinks;
+        this.btn_Credit = btn_Credit;
+        this.btn_Debit = btn_Debit;
+        this.btn_Drinks = btn_Drinks;
+        this.btn_Extras = btn_Extras;
+        this.btn_GiftCard = btn_GiftCard;
+        this.btn_KidsMenu = btn_KidsMenu;
+        this.btn_Lemonade = btn_Lemonade;
+        this.btn_Menu = btn_Menu;
+        this.btn_Milkshake = btn_Milkshake;
+        this.btn_Sandwiches = btn_Sandwiches;
+        this.btn_Sides = btn_Sides;
+        this.btn_SweetTea = btn_SweetTea;
+        this.btn_Wings = btn_Wings;
+        this.btn_Wraps = btn_Wraps;
+        this.btn_item1 = btn_item1;
+        this.btn_item2 = btn_item2;
+        this.btn_item3 = btn_item3;
+        this.btn_item4 = btn_item4;
+        this.btn_item5 = btn_item5;
+        this.btn_item6 = btn_item6;
+        this.btn_item7 = btn_item7;
+        this.jButton11 = jButton11;
+        this.jButton12 = jButton12;
+        this.jButton13 = jButton13;
+        this.jButton4 = jButton4;
+        this.jButton5 = jButton5;
+        this.jButton6 = jButton6;
+        this.jButton7 = jButton7;
+        this.jButton8 = jButton8;
+        this.jLabel1 = jLabel1;
+        this.jLabel3 = jLabel3;
+        this.jScrollPane1 = jScrollPane1;
+        this.jScrollPane2 = jScrollPane2;
+        this.lbl_Burgers = lbl_Burgers;
+        this.lbl_DrinksMenu = lbl_DrinksMenu;
+        this.lbl_FoodMenu = lbl_FoodMenu;
+        this.list_Order = list_Order;
+        this.rtb_total = rtb_total;
+    }
+
+    DefaultListModel  model1= new DefaultListModel();
     private void btn_item1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_item1ActionPerformed
         // TODO add your handling code here:
-        
+        model1.addElement("Food Item #1");
+        list_Order.setModel(model1);
+        list_Order.setSelectedIndex(0);
+       
     }//GEN-LAST:event_btn_item1ActionPerformed
 
+    private void btn_item2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_item2ActionPerformed
+        // TODO add your handling code here:
+        model1.addElement("Food Item #2");
+        list_Order.setModel(model1);
+        list_Order.setSelectedIndex(0);
+    }//GEN-LAST:event_btn_item2ActionPerformed
+
+    private void btn_item3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_item3ActionPerformed
+        // TODO add your handling code here:
+         model1.addElement("Food Item #3");
+         list_Order.setModel(model1);
+         list_Order.setSelectedIndex(0);
+    }//GEN-LAST:event_btn_item3ActionPerformed
+
+    private void btn_item4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_item4ActionPerformed
+        // TODO add your handling code here:
+        model1.addElement("Food Item #4");
+        list_Order.setModel(model1);
+        list_Order.setSelectedIndex(0);
+    }//GEN-LAST:event_btn_item4ActionPerformed
+
+    private void btn_item5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_item5ActionPerformed
+        // TODO add your handling code here:
+        model1.addElement("Food Item #5");
+        list_Order.setModel(model1);
+        list_Order.setSelectedIndex(0);
+    }//GEN-LAST:event_btn_item5ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        model1.remove(list_Order.getSelectedIndex());
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void btn_item7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_item7ActionPerformed
+        // TODO add your handling code here:
+        model1.addElement("Food Item #7");
+        list_Order.setModel(model1);
+        list_Order.setSelectedIndex(0);
+    }//GEN-LAST:event_btn_item7ActionPerformed
+                                        
     /**
      * @param args the command line arguments
      */
@@ -761,6 +966,7 @@ public class View_POS extends javax.swing.JFrame {
     private javax.swing.JPanel Panel_Background;
     private javax.swing.JPanel Panel_Buttons;
     private javax.swing.JPanel Panel_Cards;
+    private javax.swing.JPanel Panel_DrinkSize;
     private javax.swing.JPanel Panel_Employee_works;
     private javax.swing.JPanel Panel_Parent;
     private javax.swing.JButton btn_Burgers;
@@ -768,11 +974,11 @@ public class View_POS extends javax.swing.JFrame {
     private javax.swing.JButton btn_Checkout;
     private javax.swing.JButton btn_ChocDrink;
     private javax.swing.JButton btn_Coffee;
-    private javax.swing.JButton btn_CokeDrinks;
     private javax.swing.JButton btn_Credit;
     private javax.swing.JButton btn_Debit;
     private javax.swing.JButton btn_Drinks;
     private javax.swing.JButton btn_Extras;
+    private javax.swing.JButton btn_FountainDrinks;
     private javax.swing.JButton btn_GiftCard;
     private javax.swing.JButton btn_KidsMenu;
     private javax.swing.JButton btn_Lemonade;
@@ -790,16 +996,19 @@ public class View_POS extends javax.swing.JFrame {
     private javax.swing.JButton btn_item5;
     private javax.swing.JButton btn_item6;
     private javax.swing.JButton btn_item7;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
