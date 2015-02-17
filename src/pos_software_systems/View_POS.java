@@ -6,17 +6,31 @@
 
 package pos_software_systems;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import javax.swing.JOptionPane;
+
+
 /**
  *
  * @author Jovy
  */
 public class View_POS extends javax.swing.JFrame {
+    
 
     /**
      * Creates new form View_POS
      */
     public View_POS() {
         initComponents();
+        
+       /**
+       * Toolkit centerWindowTool = Toolkit.getDefaultToolkit();
+       * Dimension dim = new Dimension(centerWindowTool.getScreenSize());
+       * int height = (int) dim.getHeight();
+       * int width = (int) dim.getWidth();
+       * setSize(width, height);
+        */
     }
 
     /**
@@ -32,34 +46,70 @@ public class View_POS extends javax.swing.JFrame {
         Panel_Parent = new javax.swing.JPanel();
         Panel_Buttons = new javax.swing.JPanel();
         btn_Menu = new javax.swing.JButton();
+        btn_Drinks = new javax.swing.JButton();
         btn_Extras = new javax.swing.JButton();
-        btn_OrderReview = new javax.swing.JButton();
         btn_Checkout = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
         Panel_Cards = new javax.swing.JPanel();
-        Card_Menu = new javax.swing.JPanel();
+        Card_FoodMenu = new javax.swing.JPanel();
+        btn_Burgers = new javax.swing.JButton();
+        btn_Sides = new javax.swing.JButton();
+        btn_Wings = new javax.swing.JButton();
+        btn_Sandwiches = new javax.swing.JButton();
+        btn_Wraps = new javax.swing.JButton();
+        lbl_FoodMenu = new javax.swing.JLabel();
+        btn_KidsMenu = new javax.swing.JButton();
+        Card_Drinks = new javax.swing.JPanel();
+        btn_CokeDrinks = new javax.swing.JButton();
+        btn_SweetTea = new javax.swing.JButton();
+        btn_Coffee = new javax.swing.JButton();
+        btn_Milkshake = new javax.swing.JButton();
+        btn_ChocDrink = new javax.swing.JButton();
+        btn_Lemonade = new javax.swing.JButton();
+        lbl_DrinksMenu = new javax.swing.JLabel();
         Card_Extras = new javax.swing.JPanel();
-        Card_OrderReview = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         Card_CheckOut = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btn_Debit = new javax.swing.JButton();
+        btn_Credit = new javax.swing.JButton();
+        btn_Cash = new javax.swing.JButton();
+        btn_GiftCard = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        Card_Burgers = new javax.swing.JPanel();
+        btn_item1 = new javax.swing.JButton();
+        btn_item2 = new javax.swing.JButton();
+        btn_item3 = new javax.swing.JButton();
+        btn_item7 = new javax.swing.JButton();
+        btn_item6 = new javax.swing.JButton();
+        btn_item4 = new javax.swing.JButton();
+        btn_item5 = new javax.swing.JButton();
+        lbl_Burgers = new javax.swing.JLabel();
         Panel_Employee_works = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        list_Order = new javax.swing.JList();
+        jButton11 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        rtb_total = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Panel_Background.setBackground(new java.awt.Color(102, 153, 255));
+        Panel_Background.setBackground(new java.awt.Color(0, 0, 0));
 
         Panel_Parent.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        Panel_Buttons.setBackground(new java.awt.Color(51, 0, 153));
+        Panel_Buttons.setBackground(new java.awt.Color(153, 153, 255));
         Panel_Buttons.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        btn_Menu.setText("Menu");
+        btn_Menu.setBackground(new java.awt.Color(255, 255, 204));
+        btn_Menu.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btn_Menu.setText("Food");
         btn_Menu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_MenuActionPerformed(evt);
@@ -67,6 +117,16 @@ public class View_POS extends javax.swing.JFrame {
         });
         Panel_Buttons.add(btn_Menu);
 
+        btn_Drinks.setFont(new java.awt.Font("Arial Unicode MS", 0, 24)); // NOI18N
+        btn_Drinks.setText("Drinks");
+        btn_Drinks.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_DrinksActionPerformed(evt);
+            }
+        });
+        Panel_Buttons.add(btn_Drinks);
+
+        btn_Extras.setFont(btn_Extras.getFont().deriveFont(btn_Extras.getFont().getSize()+8f));
         btn_Extras.setText("Extras");
         btn_Extras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,14 +135,7 @@ public class View_POS extends javax.swing.JFrame {
         });
         Panel_Buttons.add(btn_Extras);
 
-        btn_OrderReview.setText("Review Order");
-        btn_OrderReview.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_OrderReviewActionPerformed(evt);
-            }
-        });
-        Panel_Buttons.add(btn_OrderReview);
-
+        btn_Checkout.setFont(new java.awt.Font("Arial Unicode MS", 0, 24)); // NOI18N
         btn_Checkout.setText("Checkout");
         btn_Checkout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,89 +144,419 @@ public class View_POS extends javax.swing.JFrame {
         });
         Panel_Buttons.add(btn_Checkout);
 
+        jButton12.setFont(new java.awt.Font("Arial Unicode MS", 0, 24)); // NOI18N
+        jButton12.setText("Cancel Order");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        Panel_Buttons.add(jButton12);
+
         Panel_Cards.setBackground(new java.awt.Color(0, 153, 102));
         Panel_Cards.setLayout(new java.awt.CardLayout());
 
-        Card_Menu.setBackground(new java.awt.Color(255, 153, 255));
-        Card_Menu.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Card_FoodMenu.setBackground(new java.awt.Color(255, 255, 204));
+        Card_FoodMenu.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        javax.swing.GroupLayout Card_MenuLayout = new javax.swing.GroupLayout(Card_Menu);
-        Card_Menu.setLayout(Card_MenuLayout);
-        Card_MenuLayout.setHorizontalGroup(
-            Card_MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 879, Short.MAX_VALUE)
+        btn_Burgers.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btn_Burgers.setText("Burgers");
+        btn_Burgers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_BurgersActionPerformed(evt);
+            }
+        });
+
+        btn_Sides.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btn_Sides.setText("Sides");
+        btn_Sides.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_SidesActionPerformed(evt);
+            }
+        });
+
+        btn_Wings.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btn_Wings.setText("Wings");
+
+        btn_Sandwiches.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btn_Sandwiches.setText("Sandwiches");
+
+        btn_Wraps.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btn_Wraps.setText("Wraps");
+
+        lbl_FoodMenu.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lbl_FoodMenu.setText("Food Menu");
+
+        btn_KidsMenu.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btn_KidsMenu.setText("Kids' Menu");
+
+        javax.swing.GroupLayout Card_FoodMenuLayout = new javax.swing.GroupLayout(Card_FoodMenu);
+        Card_FoodMenu.setLayout(Card_FoodMenuLayout);
+        Card_FoodMenuLayout.setHorizontalGroup(
+            Card_FoodMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Card_FoodMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Card_FoodMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_FoodMenu)
+                    .addGroup(Card_FoodMenuLayout.createSequentialGroup()
+                        .addComponent(btn_Burgers, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_Sandwiches, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Card_FoodMenuLayout.createSequentialGroup()
+                        .addComponent(btn_Wraps)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_KidsMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Card_FoodMenuLayout.createSequentialGroup()
+                        .addComponent(btn_Wings)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_Sides)))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
-        Card_MenuLayout.setVerticalGroup(
-            Card_MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 349, Short.MAX_VALUE)
+
+        Card_FoodMenuLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btn_Burgers, btn_KidsMenu, btn_Sandwiches, btn_Sides, btn_Wings, btn_Wraps});
+
+        Card_FoodMenuLayout.setVerticalGroup(
+            Card_FoodMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Card_FoodMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl_FoodMenu)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(Card_FoodMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_Burgers, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_Sandwiches))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(Card_FoodMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_Wings)
+                    .addComponent(btn_Sides))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(Card_FoodMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_Wraps, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_KidsMenu))
+                .addContainerGap(269, Short.MAX_VALUE))
         );
 
-        Panel_Cards.add(Card_Menu, "card4");
+        Card_FoodMenuLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btn_Burgers, btn_KidsMenu, btn_Sandwiches, btn_Sides, btn_Wings, btn_Wraps});
 
-        Card_Extras.setBackground(new java.awt.Color(255, 153, 51));
+        Panel_Cards.add(Card_FoodMenu, "card4");
+
+        Card_Drinks.setBackground(new java.awt.Color(255, 255, 204));
+
+        btn_CokeDrinks.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btn_CokeDrinks.setText("Fountain");
+        btn_CokeDrinks.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_CokeDrinksActionPerformed(evt);
+            }
+        });
+
+        btn_SweetTea.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btn_SweetTea.setText("Sweet Tea");
+
+        btn_Coffee.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btn_Coffee.setText("Coffee");
+
+        btn_Milkshake.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btn_Milkshake.setText("MilkShake");
+
+        btn_ChocDrink.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btn_ChocDrink.setText("Chocolate Drink");
+
+        btn_Lemonade.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btn_Lemonade.setText("Lemonade");
+        btn_Lemonade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_LemonadeActionPerformed(evt);
+            }
+        });
+
+        lbl_DrinksMenu.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lbl_DrinksMenu.setText("Drinks Menu");
+
+        javax.swing.GroupLayout Card_DrinksLayout = new javax.swing.GroupLayout(Card_Drinks);
+        Card_Drinks.setLayout(Card_DrinksLayout);
+        Card_DrinksLayout.setHorizontalGroup(
+            Card_DrinksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Card_DrinksLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Card_DrinksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Card_DrinksLayout.createSequentialGroup()
+                        .addComponent(btn_CokeDrinks, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_Milkshake)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_Coffee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(Card_DrinksLayout.createSequentialGroup()
+                        .addComponent(btn_SweetTea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_ChocDrink, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_Lemonade))
+                    .addComponent(lbl_DrinksMenu))
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        Card_DrinksLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btn_ChocDrink, btn_Coffee, btn_CokeDrinks, btn_Lemonade, btn_Milkshake, btn_SweetTea});
+
+        Card_DrinksLayout.setVerticalGroup(
+            Card_DrinksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Card_DrinksLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(lbl_DrinksMenu)
+                .addGap(18, 18, 18)
+                .addGroup(Card_DrinksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_CokeDrinks, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_Milkshake, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                    .addComponent(btn_Coffee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(Card_DrinksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_SweetTea, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
+                    .addComponent(btn_ChocDrink, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_Lemonade))
+                .addContainerGap(400, Short.MAX_VALUE))
+        );
+
+        Card_DrinksLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btn_ChocDrink, btn_Coffee, btn_CokeDrinks, btn_Lemonade, btn_Milkshake, btn_SweetTea});
+
+        Panel_Cards.add(Card_Drinks, "card6");
+
+        Card_Extras.setBackground(new java.awt.Color(255, 255, 204));
         Card_Extras.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel3.setText("Extras");
 
         javax.swing.GroupLayout Card_ExtrasLayout = new javax.swing.GroupLayout(Card_Extras);
         Card_Extras.setLayout(Card_ExtrasLayout);
         Card_ExtrasLayout.setHorizontalGroup(
             Card_ExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 879, Short.MAX_VALUE)
+            .addGroup(Card_ExtrasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addContainerGap(601, Short.MAX_VALUE))
         );
         Card_ExtrasLayout.setVerticalGroup(
             Card_ExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 349, Short.MAX_VALUE)
+            .addGroup(Card_ExtrasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addContainerGap(654, Short.MAX_VALUE))
         );
 
         Panel_Cards.add(Card_Extras, "card5");
 
-        Card_OrderReview.setBackground(new java.awt.Color(255, 255, 153));
-        Card_OrderReview.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        javax.swing.GroupLayout Card_OrderReviewLayout = new javax.swing.GroupLayout(Card_OrderReview);
-        Card_OrderReview.setLayout(Card_OrderReviewLayout);
-        Card_OrderReviewLayout.setHorizontalGroup(
-            Card_OrderReviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 879, Short.MAX_VALUE)
-        );
-        Card_OrderReviewLayout.setVerticalGroup(
-            Card_OrderReviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 349, Short.MAX_VALUE)
-        );
-
-        Panel_Cards.add(Card_OrderReview, "card2");
-
-        Card_CheckOut.setBackground(new java.awt.Color(0, 255, 255));
+        Card_CheckOut.setBackground(new java.awt.Color(51, 0, 153));
         Card_CheckOut.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Card_CheckOut.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("jButton1");
-        Card_CheckOut.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, -1));
+        btn_Debit.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btn_Debit.setText("Debit");
+        btn_Debit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_DebitActionPerformed(evt);
+            }
+        });
 
-        jLabel1.setText("jLabel1");
-        Card_CheckOut.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+        btn_Credit.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btn_Credit.setText("Credit");
+        btn_Credit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_CreditActionPerformed(evt);
+            }
+        });
+
+        btn_Cash.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btn_Cash.setText("Cash");
+        btn_Cash.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_CashActionPerformed(evt);
+            }
+        });
+
+        btn_GiftCard.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btn_GiftCard.setText("Gift Card");
+        btn_GiftCard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_GiftCardActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Checkout:");
+
+        javax.swing.GroupLayout Card_CheckOutLayout = new javax.swing.GroupLayout(Card_CheckOut);
+        Card_CheckOut.setLayout(Card_CheckOutLayout);
+        Card_CheckOutLayout.setHorizontalGroup(
+            Card_CheckOutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Card_CheckOutLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(Card_CheckOutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(btn_GiftCard)
+                    .addGroup(Card_CheckOutLayout.createSequentialGroup()
+                        .addComponent(btn_Debit, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19)
+                        .addComponent(btn_Credit)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_Cash)))
+                .addContainerGap(137, Short.MAX_VALUE))
+        );
+
+        Card_CheckOutLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btn_Cash, btn_Credit, btn_Debit, btn_GiftCard});
+
+        Card_CheckOutLayout.setVerticalGroup(
+            Card_CheckOutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Card_CheckOutLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(Card_CheckOutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_Debit, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(Card_CheckOutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btn_Credit)
+                        .addComponent(btn_Cash)))
+                .addGap(18, 18, 18)
+                .addComponent(btn_GiftCard)
+                .addContainerGap())
+        );
+
+        Card_CheckOutLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btn_Cash, btn_Credit, btn_Debit, btn_GiftCard});
 
         Panel_Cards.add(Card_CheckOut, "card3");
 
-        Panel_Employee_works.setBackground(new java.awt.Color(255, 0, 102));
+        Card_Burgers.setBackground(new java.awt.Color(255, 255, 204));
+
+        btn_item1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btn_item1.setText("Item 1");
+        btn_item1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_item1ActionPerformed(evt);
+            }
+        });
+
+        btn_item2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btn_item2.setText("Item 2");
+
+        btn_item3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btn_item3.setText("Item 3");
+
+        btn_item7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btn_item7.setText("Item 7");
+
+        btn_item6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btn_item6.setText("Item 6");
+        btn_item6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_item6ActionPerformed(evt);
+            }
+        });
+
+        btn_item4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btn_item4.setText("Item 4");
+
+        btn_item5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btn_item5.setText("Item 5");
+
+        lbl_Burgers.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lbl_Burgers.setText("Burgers");
+
+        javax.swing.GroupLayout Card_BurgersLayout = new javax.swing.GroupLayout(Card_Burgers);
+        Card_Burgers.setLayout(Card_BurgersLayout);
+        Card_BurgersLayout.setHorizontalGroup(
+            Card_BurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Card_BurgersLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Card_BurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Card_BurgersLayout.createSequentialGroup()
+                        .addComponent(btn_item4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_item5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_item6))
+                    .addGroup(Card_BurgersLayout.createSequentialGroup()
+                        .addComponent(btn_item1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_item2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_item3))
+                    .addComponent(btn_item7)
+                    .addComponent(lbl_Burgers))
+                .addContainerGap(107, Short.MAX_VALUE))
+        );
+
+        Card_BurgersLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btn_item1, btn_item2, btn_item3, btn_item4, btn_item5, btn_item6, btn_item7});
+
+        Card_BurgersLayout.setVerticalGroup(
+            Card_BurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Card_BurgersLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(lbl_Burgers)
+                .addGap(18, 18, 18)
+                .addGroup(Card_BurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_item1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_item2)
+                    .addComponent(btn_item3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(Card_BurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_item4)
+                    .addComponent(btn_item5)
+                    .addComponent(btn_item6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_item7)
+                .addContainerGap(255, Short.MAX_VALUE))
+        );
+
+        Card_BurgersLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btn_item1, btn_item2, btn_item3, btn_item4, btn_item5, btn_item6, btn_item7});
+
+        Panel_Cards.add(Card_Burgers, "card7");
+
+        Panel_Employee_works.setBackground(new java.awt.Color(204, 204, 255));
         Panel_Employee_works.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton4.setText("jButton4");
-        Panel_Employee_works.add(jButton4);
-
-        jButton5.setText("jButton5");
+        jButton5.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jButton5.setText("ClockIn/ClockOut");
         Panel_Employee_works.add(jButton5);
 
+        jButton4.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jButton4.setText("Manager");
+        Panel_Employee_works.add(jButton4);
+
+        jButton6.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jButton6.setText("jButton6");
         Panel_Employee_works.add(jButton6);
 
+        jButton7.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jButton7.setText("jButton7");
         Panel_Employee_works.add(jButton7);
 
+        jButton8.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jButton8.setText("jButton8");
         Panel_Employee_works.add(jButton8);
 
+        jButton9.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jButton9.setText("jButton9");
         Panel_Employee_works.add(jButton9);
+
+        list_Order.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Order:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Unicode MS", 0, 14))); // NOI18N
+        list_Order.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
+        list_Order.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(list_Order);
+
+        jButton11.setBackground(new java.awt.Color(204, 0, 0));
+        jButton11.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jButton11.setText("VOID ITEM");
+
+        jButton13.setBackground(new java.awt.Color(0, 51, 204));
+        jButton13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton13.setForeground(new java.awt.Color(255, 255, 255));
+        jButton13.setText("Calculator");
+
+        rtb_total.setColumns(20);
+        rtb_total.setRows(5);
+        jScrollPane1.setViewportView(rtb_total);
 
         javax.swing.GroupLayout Panel_ParentLayout = new javax.swing.GroupLayout(Panel_Parent);
         Panel_Parent.setLayout(Panel_ParentLayout);
@@ -182,21 +565,38 @@ public class View_POS extends javax.swing.JFrame {
             .addGroup(Panel_ParentLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(Panel_ParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Panel_Employee_works, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Panel_Cards, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Panel_Buttons, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Panel_Buttons, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(Panel_ParentLayout.createSequentialGroup()
+                        .addComponent(Panel_Cards, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(Panel_ParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2)
+                            .addGroup(Panel_ParentLayout.createSequentialGroup()
+                                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jScrollPane1))))
                 .addContainerGap())
+            .addComponent(Panel_Employee_works, javax.swing.GroupLayout.DEFAULT_SIZE, 1093, Short.MAX_VALUE)
         );
         Panel_ParentLayout.setVerticalGroup(
             Panel_ParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_ParentLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Panel_Employee_works, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Panel_Cards, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Panel_Buttons, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(Panel_Employee_works, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addGroup(Panel_ParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel_ParentLayout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(Panel_ParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(Panel_Cards, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Panel_Buttons, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                .addGap(8, 8, 8))
         );
 
         javax.swing.GroupLayout Panel_BackgroundLayout = new javax.swing.GroupLayout(Panel_Background);
@@ -233,7 +633,7 @@ public class View_POS extends javax.swing.JFrame {
     private void btn_MenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_MenuActionPerformed
         // This is the code how you change the cards
        Panel_Cards.removeAll();
-       Panel_Cards.add(Card_Menu);
+       Panel_Cards.add(Card_FoodMenu);
        Panel_Cards.repaint();
        Panel_Cards.revalidate();
     }//GEN-LAST:event_btn_MenuActionPerformed
@@ -246,14 +646,6 @@ public class View_POS extends javax.swing.JFrame {
        Panel_Cards.revalidate();
     }//GEN-LAST:event_btn_ExtrasActionPerformed
 
-    private void btn_OrderReviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OrderReviewActionPerformed
-         // This is the code how you change the cards
-       Panel_Cards.removeAll();
-       Panel_Cards.add(Card_OrderReview);
-       Panel_Cards.repaint();
-       Panel_Cards.revalidate();
-    }//GEN-LAST:event_btn_OrderReviewActionPerformed
-
     private void btn_CheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CheckoutActionPerformed
          // This is the code how you change the cards
        Panel_Cards.removeAll();
@@ -261,6 +653,69 @@ public class View_POS extends javax.swing.JFrame {
        Panel_Cards.repaint();
        Panel_Cards.revalidate();
     }//GEN-LAST:event_btn_CheckoutActionPerformed
+
+    private void btn_BurgersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_BurgersActionPerformed
+        // TODO add your handling code here:
+       Panel_Cards.removeAll();
+       Panel_Cards.add(Card_Burgers);
+       Panel_Cards.repaint();
+       Panel_Cards.revalidate();
+    }//GEN-LAST:event_btn_BurgersActionPerformed
+
+    private void btn_SidesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SidesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_SidesActionPerformed
+
+    private void btn_DrinksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_DrinksActionPerformed
+        // TODO add your handling code here:
+        Panel_Cards.removeAll();
+       Panel_Cards.add(Card_Drinks);
+       Panel_Cards.repaint();
+       Panel_Cards.revalidate();
+    }//GEN-LAST:event_btn_DrinksActionPerformed
+
+    private void btn_LemonadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LemonadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_LemonadeActionPerformed
+
+    private void btn_item6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_item6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_item6ActionPerformed
+
+    private void btn_CreditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CreditActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(Card_FoodMenu, "Swipe your card");
+        
+    }//GEN-LAST:event_btn_CreditActionPerformed
+
+    private void btn_CokeDrinksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CokeDrinksActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_CokeDrinksActionPerformed
+
+    private void btn_DebitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_DebitActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(Card_FoodMenu, "Swipe your card");
+    }//GEN-LAST:event_btn_DebitActionPerformed
+
+    private void btn_CashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CashActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showConfirmDialog(Card_FoodMenu, "Payment Received!");
+    }//GEN-LAST:event_btn_CashActionPerformed
+
+    private void btn_GiftCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_GiftCardActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showInputDialog(Card_FoodMenu, "Enter number:");
+    }//GEN-LAST:event_btn_GiftCardActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showConfirmDialog(Card_FoodMenu, "Do you want to CANCEL this Order?");
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void btn_item1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_item1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btn_item1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -298,20 +753,46 @@ public class View_POS extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Card_Burgers;
     private javax.swing.JPanel Card_CheckOut;
+    private javax.swing.JPanel Card_Drinks;
     private javax.swing.JPanel Card_Extras;
-    private javax.swing.JPanel Card_Menu;
-    private javax.swing.JPanel Card_OrderReview;
+    private javax.swing.JPanel Card_FoodMenu;
     private javax.swing.JPanel Panel_Background;
     private javax.swing.JPanel Panel_Buttons;
     private javax.swing.JPanel Panel_Cards;
     private javax.swing.JPanel Panel_Employee_works;
     private javax.swing.JPanel Panel_Parent;
+    private javax.swing.JButton btn_Burgers;
+    private javax.swing.JButton btn_Cash;
     private javax.swing.JButton btn_Checkout;
+    private javax.swing.JButton btn_ChocDrink;
+    private javax.swing.JButton btn_Coffee;
+    private javax.swing.JButton btn_CokeDrinks;
+    private javax.swing.JButton btn_Credit;
+    private javax.swing.JButton btn_Debit;
+    private javax.swing.JButton btn_Drinks;
     private javax.swing.JButton btn_Extras;
+    private javax.swing.JButton btn_GiftCard;
+    private javax.swing.JButton btn_KidsMenu;
+    private javax.swing.JButton btn_Lemonade;
     private javax.swing.JButton btn_Menu;
-    private javax.swing.JButton btn_OrderReview;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btn_Milkshake;
+    private javax.swing.JButton btn_Sandwiches;
+    private javax.swing.JButton btn_Sides;
+    private javax.swing.JButton btn_SweetTea;
+    private javax.swing.JButton btn_Wings;
+    private javax.swing.JButton btn_Wraps;
+    private javax.swing.JButton btn_item1;
+    private javax.swing.JButton btn_item2;
+    private javax.swing.JButton btn_item3;
+    private javax.swing.JButton btn_item4;
+    private javax.swing.JButton btn_item5;
+    private javax.swing.JButton btn_item6;
+    private javax.swing.JButton btn_item7;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -319,5 +800,13 @@ public class View_POS extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lbl_Burgers;
+    private javax.swing.JLabel lbl_DrinksMenu;
+    private javax.swing.JLabel lbl_FoodMenu;
+    private javax.swing.JList list_Order;
+    private javax.swing.JTextArea rtb_total;
     // End of variables declaration//GEN-END:variables
 }
