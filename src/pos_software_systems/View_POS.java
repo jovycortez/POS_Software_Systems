@@ -59,6 +59,7 @@ public class View_POS extends javax.swing.JFrame {
         btn_Checkout = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
         Panel_Cards = new javax.swing.JPanel();
+        Card_Admin = new javax.swing.JPanel();
         Card_FoodMenu = new javax.swing.JPanel();
         btn_Burgers = new javax.swing.JButton();
         btn_Sides = new javax.swing.JButton();
@@ -191,6 +192,19 @@ public class View_POS extends javax.swing.JFrame {
         Panel_Cards.setBackground(new java.awt.Color(0, 153, 102));
         Panel_Cards.setLayout(new java.awt.CardLayout());
 
+        javax.swing.GroupLayout Card_AdminLayout = new javax.swing.GroupLayout(Card_Admin);
+        Card_Admin.setLayout(Card_AdminLayout);
+        Card_AdminLayout.setHorizontalGroup(
+            Card_AdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1530, Short.MAX_VALUE)
+        );
+        Card_AdminLayout.setVerticalGroup(
+            Card_AdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 840, Short.MAX_VALUE)
+        );
+
+        Panel_Cards.add(Card_Admin, "card7");
+
         Card_FoodMenu.setBackground(new java.awt.Color(255, 255, 204));
         Card_FoodMenu.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -244,7 +258,8 @@ public class View_POS extends javax.swing.JFrame {
                         .addGap(39, 39, 39)
                         .addComponent(btn_Wraps, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(37, 37, 37)
-                        .addComponent(btn_KidsMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(btn_KidsMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(335, 335, 335))
         );
         Card_FoodMenuLayout.setVerticalGroup(
             Card_FoodMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -681,15 +696,20 @@ public class View_POS extends javax.swing.JFrame {
         Panel_Employee_works.add(jButton4);
 
         jButton6.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jButton6.setText("jButton6");
+        jButton6.setText("Online Orders");
         Panel_Employee_works.add(jButton6);
 
         jButton7.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jButton7.setText("jButton7");
+        jButton7.setText("Admin");
         Panel_Employee_works.add(jButton7);
 
         jButton8.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jButton8.setText("jButton8");
+        jButton8.setText("Logout");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
         Panel_Employee_works.add(jButton8);
 
         Panel_Parent.add(Panel_Employee_works, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 2, 1877, 70));
@@ -1016,6 +1036,11 @@ public class View_POS extends javax.swing.JFrame {
         empLogin.setVisible(true);
         
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jButton8ActionPerformed
                                         
     /**
      * @param args the command line arguments
@@ -1053,6 +1078,7 @@ public class View_POS extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Card_Admin;
     private javax.swing.JPanel Card_Burgers;
     private javax.swing.JPanel Card_CheckOut;
     private javax.swing.JPanel Card_Drinks;
