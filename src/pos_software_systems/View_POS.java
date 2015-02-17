@@ -120,7 +120,6 @@ public class View_POS extends javax.swing.JFrame {
 
         Panel_Buttons.setBackground(new java.awt.Color(153, 153, 255));
         Panel_Buttons.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Panel_Buttons.setLayout(new java.awt.GridLayout());
 
         btn_Menu.setBackground(new java.awt.Color(255, 255, 204));
         btn_Menu.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -130,7 +129,6 @@ public class View_POS extends javax.swing.JFrame {
                 btn_MenuActionPerformed(evt);
             }
         });
-        Panel_Buttons.add(btn_Menu);
 
         btn_Drinks.setFont(new java.awt.Font("Arial Unicode MS", 0, 24)); // NOI18N
         btn_Drinks.setText("Drinks");
@@ -139,7 +137,6 @@ public class View_POS extends javax.swing.JFrame {
                 btn_DrinksActionPerformed(evt);
             }
         });
-        Panel_Buttons.add(btn_Drinks);
 
         btn_Extras.setFont(btn_Extras.getFont().deriveFont(btn_Extras.getFont().getSize()+8f));
         btn_Extras.setText("Extras");
@@ -148,7 +145,6 @@ public class View_POS extends javax.swing.JFrame {
                 btn_ExtrasActionPerformed(evt);
             }
         });
-        Panel_Buttons.add(btn_Extras);
 
         btn_Checkout.setFont(new java.awt.Font("Arial Unicode MS", 0, 24)); // NOI18N
         btn_Checkout.setText("Checkout");
@@ -157,7 +153,6 @@ public class View_POS extends javax.swing.JFrame {
                 btn_CheckoutActionPerformed(evt);
             }
         });
-        Panel_Buttons.add(btn_Checkout);
 
         jButton12.setFont(new java.awt.Font("Arial Unicode MS", 0, 24)); // NOI18N
         jButton12.setText("Cancel Order");
@@ -166,7 +161,30 @@ public class View_POS extends javax.swing.JFrame {
                 jButton12ActionPerformed(evt);
             }
         });
-        Panel_Buttons.add(jButton12);
+
+        javax.swing.GroupLayout Panel_ButtonsLayout = new javax.swing.GroupLayout(Panel_Buttons);
+        Panel_Buttons.setLayout(Panel_ButtonsLayout);
+        Panel_ButtonsLayout.setHorizontalGroup(
+            Panel_ButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_ButtonsLayout.createSequentialGroup()
+                .addComponent(btn_Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btn_Drinks, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btn_Extras, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btn_Checkout, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        Panel_ButtonsLayout.setVerticalGroup(
+            Panel_ButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btn_Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btn_Drinks, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btn_Extras, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btn_Checkout, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         Panel_Parent.add(Panel_Buttons, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 916, 1860, 63));
 
@@ -175,7 +193,6 @@ public class View_POS extends javax.swing.JFrame {
 
         Card_FoodMenu.setBackground(new java.awt.Color(255, 255, 204));
         Card_FoodMenu.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Card_FoodMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_Burgers.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_Burgers.setText("Burgers");
@@ -184,7 +201,6 @@ public class View_POS extends javax.swing.JFrame {
                 btn_BurgersActionPerformed(evt);
             }
         });
-        Card_FoodMenu.add(btn_Burgers, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 63, 261, 117));
 
         btn_Sides.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_Sides.setText("Sides");
@@ -193,31 +209,64 @@ public class View_POS extends javax.swing.JFrame {
                 btn_SidesActionPerformed(evt);
             }
         });
-        Card_FoodMenu.add(btn_Sides, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 225, 261, 117));
 
         btn_Wings.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_Wings.setText("Wings");
-        Card_FoodMenu.add(btn_Wings, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 63, 261, 117));
 
         btn_Sandwiches.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_Sandwiches.setText("Sandwiches");
-        Card_FoodMenu.add(btn_Sandwiches, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 63, 261, 117));
 
         btn_Wraps.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_Wraps.setText("Wraps");
-        Card_FoodMenu.add(btn_Wraps, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 225, 261, 117));
 
         lbl_FoodMenu.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lbl_FoodMenu.setText("Food Menu");
-        Card_FoodMenu.add(lbl_FoodMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 18, -1, -1));
 
         btn_KidsMenu.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_KidsMenu.setText("Kids' Menu");
-        Card_FoodMenu.add(btn_KidsMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 225, 261, 117));
+
+        javax.swing.GroupLayout Card_FoodMenuLayout = new javax.swing.GroupLayout(Card_FoodMenu);
+        Card_FoodMenu.setLayout(Card_FoodMenuLayout);
+        Card_FoodMenuLayout.setHorizontalGroup(
+            Card_FoodMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Card_FoodMenuLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(Card_FoodMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_FoodMenu)
+                    .addGroup(Card_FoodMenuLayout.createSequentialGroup()
+                        .addComponent(btn_Burgers, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(btn_Sandwiches, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)
+                        .addComponent(btn_Wings, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Card_FoodMenuLayout.createSequentialGroup()
+                        .addComponent(btn_Sides, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(btn_Wraps, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)
+                        .addComponent(btn_KidsMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        );
+        Card_FoodMenuLayout.setVerticalGroup(
+            Card_FoodMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Card_FoodMenuLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(lbl_FoodMenu)
+                .addGap(16, 16, 16)
+                .addGroup(Card_FoodMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_Burgers, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_Sandwiches, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_Wings, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
+                .addGroup(Card_FoodMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_Sides, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_Wraps, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_KidsMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         Panel_Cards.add(Card_FoodMenu, "card4");
 
         Card_Drinks.setBackground(new java.awt.Color(255, 255, 204));
+        Card_Drinks.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btn_FountainDrinks.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_FountainDrinks.setText("Fountain Drinks");
@@ -315,7 +364,7 @@ public class View_POS extends javax.swing.JFrame {
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(236, Short.MAX_VALUE))
         );
 
         Panel_DrinkSizeLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jButton2, jButton3});
@@ -343,7 +392,7 @@ public class View_POS extends javax.swing.JFrame {
                                 .addGroup(Card_DrinksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btn_Lemonade)
                                     .addComponent(btn_Coffee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(0, 788, Short.MAX_VALUE)))
+                        .addGap(0, 790, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -364,7 +413,7 @@ public class View_POS extends javax.swing.JFrame {
                     .addComponent(btn_SweetTea, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
                     .addComponent(btn_ChocDrink, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_Lemonade))
-                .addGap(73, 73, 73)
+                .addGap(111, 111, 111)
                 .addComponent(Panel_DrinkSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -386,14 +435,14 @@ public class View_POS extends javax.swing.JFrame {
             .addGroup(Card_ExtrasLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addContainerGap(1439, Short.MAX_VALUE))
+                .addContainerGap(1445, Short.MAX_VALUE))
         );
         Card_ExtrasLayout.setVerticalGroup(
             Card_ExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Card_ExtrasLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addContainerGap(788, Short.MAX_VALUE))
+                .addContainerGap(791, Short.MAX_VALUE))
         );
 
         Panel_Cards.add(Card_Extras, "card5");
@@ -451,7 +500,7 @@ public class View_POS extends javax.swing.JFrame {
                         .addGap(40, 40, 40)
                         .addComponent(btn_Cash))
                     .addComponent(btn_GiftCard))
-                .addContainerGap(908, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btn_Cash, btn_Credit, btn_Debit, btn_GiftCard});
@@ -466,7 +515,7 @@ public class View_POS extends javax.swing.JFrame {
                     .addComponent(btn_Debit, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btn_GiftCard)
-                .addContainerGap(208, Short.MAX_VALUE))
+                .addContainerGap(564, Short.MAX_VALUE))
         );
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btn_Cash, btn_Credit, btn_Debit, btn_GiftCard});
@@ -478,10 +527,10 @@ public class View_POS extends javax.swing.JFrame {
             .addGroup(Card_CheckOutLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addGroup(Card_CheckOutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(Card_CheckOutLayout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 1404, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         Card_CheckOutLayout.setVerticalGroup(
@@ -490,7 +539,7 @@ public class View_POS extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -578,7 +627,7 @@ public class View_POS extends javax.swing.JFrame {
                         .addComponent(btn_item3))
                     .addComponent(btn_item7)
                     .addComponent(lbl_Burgers))
-                .addContainerGap(945, Short.MAX_VALUE))
+                .addContainerGap(951, Short.MAX_VALUE))
         );
 
         Card_BurgersLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btn_item1, btn_item2, btn_item3, btn_item4, btn_item5, btn_item6, btn_item7});
@@ -607,14 +656,19 @@ public class View_POS extends javax.swing.JFrame {
 
         Panel_Cards.add(Card_Burgers, "card7");
 
-        Panel_Parent.add(Panel_Cards, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 75, -1, -1));
+        Panel_Parent.add(Panel_Cards, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 75, 1530, 840));
 
         Panel_Employee_works.setBackground(new java.awt.Color(204, 204, 255));
         Panel_Employee_works.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Panel_Employee_works.setLayout(new java.awt.GridLayout());
+        Panel_Employee_works.setLayout(new java.awt.GridLayout(1, 0));
 
         jButton5.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jButton5.setText("ClockIn/ClockOut");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         Panel_Employee_works.add(jButton5);
 
         jButton4.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
@@ -955,6 +1009,13 @@ public class View_POS extends javax.swing.JFrame {
         mgrLogin.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        View_Emp_Verification empLogin = new View_Emp_Verification();
+        empLogin.setVisible(true);
+        
+    }//GEN-LAST:event_jButton5ActionPerformed
                                         
     /**
      * @param args the command line arguments

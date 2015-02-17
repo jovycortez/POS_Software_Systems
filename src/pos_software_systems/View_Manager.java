@@ -40,43 +40,41 @@ public class View_Manager extends javax.swing.JFrame {
 
         Mgr_BackgroundPanel = new javax.swing.JPanel();
         Mgr_Parent_Panel = new javax.swing.JPanel();
-        Mgr_Card_Parent = new javax.swing.JPanel();
         Mgr_ButtonManager = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Mgr_btn_reports = new javax.swing.JButton();
+        Mgr_btn_EmpHours = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        Mgr_ParentPanel_Card = new javax.swing.JPanel();
+        Mgr_Card_Reports = new javax.swing.JPanel();
+        Mgr_Card_EmpHours = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Mgr_BackgroundPanel.setBackground(new java.awt.Color(51, 0, 153));
 
-        javax.swing.GroupLayout Mgr_Card_ParentLayout = new javax.swing.GroupLayout(Mgr_Card_Parent);
-        Mgr_Card_Parent.setLayout(Mgr_Card_ParentLayout);
-        Mgr_Card_ParentLayout.setHorizontalGroup(
-            Mgr_Card_ParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        Mgr_Card_ParentLayout.setVerticalGroup(
-            Mgr_Card_ParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 437, Short.MAX_VALUE)
-        );
+        Mgr_ButtonManager.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton1.setText("Reports");
+        Mgr_btn_reports.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Mgr_btn_reports.setText("Reports");
+        Mgr_btn_reports.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Mgr_btn_reportsActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Employee Hours");
+        Mgr_btn_EmpHours.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Mgr_btn_EmpHours.setText("Employee Hours");
+        Mgr_btn_EmpHours.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Mgr_btn_EmpHoursActionPerformed(evt);
+            }
+        });
 
+        jButton3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton3.setText("jButton3");
 
-        jButton4.setText("jButton4");
-
-        jButton5.setText("jButton5");
-
-        jButton6.setText("jButton6");
-
+        jButton7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton7.setText("Return to MAIN VIEW");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,35 +88,65 @@ public class View_Manager extends javax.swing.JFrame {
             Mgr_ButtonManagerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Mgr_ButtonManagerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(Mgr_btn_reports)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addComponent(Mgr_btn_EmpHours)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton7)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        Mgr_ButtonManagerLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {Mgr_btn_EmpHours, Mgr_btn_reports, jButton3, jButton7});
+
         Mgr_ButtonManagerLayout.setVerticalGroup(
             Mgr_ButtonManagerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Mgr_ButtonManagerLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(Mgr_ButtonManagerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6)
-                    .addComponent(jButton7))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(Mgr_ButtonManagerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Mgr_btn_reports, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(Mgr_ButtonManagerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Mgr_btn_EmpHours)
+                        .addComponent(jButton3)
+                        .addComponent(jButton7)))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
+
+        Mgr_ButtonManagerLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {Mgr_btn_EmpHours, Mgr_btn_reports, jButton3, jButton7});
+
+        Mgr_ParentPanel_Card.setLayout(new java.awt.CardLayout());
+
+        Mgr_Card_Reports.setBackground(new java.awt.Color(255, 255, 204));
+        Mgr_Card_Reports.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Reports", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
+
+        javax.swing.GroupLayout Mgr_Card_ReportsLayout = new javax.swing.GroupLayout(Mgr_Card_Reports);
+        Mgr_Card_Reports.setLayout(Mgr_Card_ReportsLayout);
+        Mgr_Card_ReportsLayout.setHorizontalGroup(
+            Mgr_Card_ReportsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1109, Short.MAX_VALUE)
+        );
+        Mgr_Card_ReportsLayout.setVerticalGroup(
+            Mgr_Card_ReportsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 408, Short.MAX_VALUE)
+        );
+
+        Mgr_ParentPanel_Card.add(Mgr_Card_Reports, "card2");
+
+        Mgr_Card_EmpHours.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Employee Hours", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
+
+        javax.swing.GroupLayout Mgr_Card_EmpHoursLayout = new javax.swing.GroupLayout(Mgr_Card_EmpHours);
+        Mgr_Card_EmpHours.setLayout(Mgr_Card_EmpHoursLayout);
+        Mgr_Card_EmpHoursLayout.setHorizontalGroup(
+            Mgr_Card_EmpHoursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1109, Short.MAX_VALUE)
+        );
+        Mgr_Card_EmpHoursLayout.setVerticalGroup(
+            Mgr_Card_EmpHoursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 408, Short.MAX_VALUE)
+        );
+
+        Mgr_ParentPanel_Card.add(Mgr_Card_EmpHours, "card3");
 
         javax.swing.GroupLayout Mgr_Parent_PanelLayout = new javax.swing.GroupLayout(Mgr_Parent_Panel);
         Mgr_Parent_Panel.setLayout(Mgr_Parent_PanelLayout);
@@ -127,25 +155,25 @@ public class View_Manager extends javax.swing.JFrame {
             .addGroup(Mgr_Parent_PanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(Mgr_Parent_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Mgr_Card_Parent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Mgr_ButtonManager, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Mgr_ButtonManager, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Mgr_ParentPanel_Card, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap())
         );
         Mgr_Parent_PanelLayout.setVerticalGroup(
             Mgr_Parent_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Mgr_Parent_PanelLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Mgr_Parent_PanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Mgr_Card_Parent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(Mgr_ParentPanel_Card, javax.swing.GroupLayout.DEFAULT_SIZE, 439, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Mgr_ButtonManager, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout Mgr_BackgroundPanelLayout = new javax.swing.GroupLayout(Mgr_BackgroundPanel);
         Mgr_BackgroundPanel.setLayout(Mgr_BackgroundPanelLayout);
         Mgr_BackgroundPanelLayout.setHorizontalGroup(
             Mgr_BackgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Mgr_BackgroundPanelLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Mgr_BackgroundPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Mgr_Parent_Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -178,6 +206,22 @@ public class View_Manager extends javax.swing.JFrame {
         posView.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void Mgr_btn_reportsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mgr_btn_reportsActionPerformed
+        // TODO add your handling code here:
+        Mgr_ParentPanel_Card.removeAll();
+       Mgr_ParentPanel_Card.add(Mgr_Card_Reports);
+       Mgr_ParentPanel_Card.repaint();
+       Mgr_ParentPanel_Card.revalidate();
+    }//GEN-LAST:event_Mgr_btn_reportsActionPerformed
+
+    private void Mgr_btn_EmpHoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mgr_btn_EmpHoursActionPerformed
+        // TODO add your handling code here:
+         Mgr_ParentPanel_Card.removeAll();
+       Mgr_ParentPanel_Card.add(Mgr_Card_EmpHours);
+       Mgr_ParentPanel_Card.repaint();
+       Mgr_ParentPanel_Card.revalidate();
+    }//GEN-LAST:event_Mgr_btn_EmpHoursActionPerformed
 
     /**
      * @param args the command line arguments
@@ -217,14 +261,13 @@ public class View_Manager extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Mgr_BackgroundPanel;
     private javax.swing.JPanel Mgr_ButtonManager;
-    private javax.swing.JPanel Mgr_Card_Parent;
+    private javax.swing.JPanel Mgr_Card_EmpHours;
+    private javax.swing.JPanel Mgr_Card_Reports;
+    private javax.swing.JPanel Mgr_ParentPanel_Card;
     private javax.swing.JPanel Mgr_Parent_Panel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton Mgr_btn_EmpHours;
+    private javax.swing.JButton Mgr_btn_reports;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     // End of variables declaration//GEN-END:variables
 }
