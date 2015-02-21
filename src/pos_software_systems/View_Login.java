@@ -23,6 +23,7 @@ PreparedStatement pst = null;
      */
     public View_Login() {
         initComponents();
+        setLocationRelativeTo(null);
         dbconn = DBConnection.Connect();
     }
 
