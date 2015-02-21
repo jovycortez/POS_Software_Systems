@@ -101,8 +101,8 @@ public class View_POS extends javax.swing.JFrame {
         lbl_Burgers = new javax.swing.JLabel();
         Panel_Employee_works = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
@@ -112,7 +112,6 @@ public class View_POS extends javax.swing.JFrame {
         jButton13 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(2000, 2500));
 
         Panel_Background.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -678,13 +677,22 @@ public class View_POS extends javax.swing.JFrame {
         Panel_Employee_works.setLayout(new java.awt.GridLayout(1, 0));
 
         jButton5.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jButton5.setText("ClockIn/ClockOut");
+        jButton5.setText("Time Clock");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
         Panel_Employee_works.add(jButton5);
+
+        jButton6.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jButton6.setText("Cashier Logged");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        Panel_Employee_works.add(jButton6);
 
         jButton4.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jButton4.setText("Manager");
@@ -694,10 +702,6 @@ public class View_POS extends javax.swing.JFrame {
             }
         });
         Panel_Employee_works.add(jButton4);
-
-        jButton6.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jButton6.setText("Online Orders");
-        Panel_Employee_works.add(jButton6);
 
         jButton7.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jButton7.setText("Admin");
@@ -1025,7 +1029,7 @@ public class View_POS extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        View_Login mgrLogin = new View_Login();
+        View_MgrLogin mgrLogin = new View_MgrLogin();
         mgrLogin.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -1041,6 +1045,10 @@ public class View_POS extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
                                         
     /**
      * @param args the command line arguments
