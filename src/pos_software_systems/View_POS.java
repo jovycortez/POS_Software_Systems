@@ -83,6 +83,7 @@ public class View_POS extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         Card_Extras = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        Card_OrderOnline = new javax.swing.JPanel();
         Card_CheckOut = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -461,6 +462,21 @@ public class View_POS extends javax.swing.JFrame {
 
         Panel_Cards.add(Card_Extras, "card5");
 
+        Card_OrderOnline.setBackground(new java.awt.Color(255, 255, 204));
+
+        javax.swing.GroupLayout Card_OrderOnlineLayout = new javax.swing.GroupLayout(Card_OrderOnline);
+        Card_OrderOnline.setLayout(Card_OrderOnlineLayout);
+        Card_OrderOnlineLayout.setHorizontalGroup(
+            Card_OrderOnlineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1530, Short.MAX_VALUE)
+        );
+        Card_OrderOnlineLayout.setVerticalGroup(
+            Card_OrderOnlineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 840, Short.MAX_VALUE)
+        );
+
+        Panel_Cards.add(Card_OrderOnline, "card8");
+
         Card_CheckOut.setBackground(new java.awt.Color(51, 0, 153));
         Card_CheckOut.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -627,20 +643,21 @@ public class View_POS extends javax.swing.JFrame {
             .addGroup(Card_BurgersLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(Card_BurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Card_BurgersLayout.createSequentialGroup()
-                        .addComponent(btn_item4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_item5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_item6))
-                    .addGroup(Card_BurgersLayout.createSequentialGroup()
-                        .addComponent(btn_item1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_item2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_item3))
                     .addComponent(btn_item7)
-                    .addComponent(lbl_Burgers))
+                    .addComponent(lbl_Burgers)
+                    .addGroup(Card_BurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(Card_BurgersLayout.createSequentialGroup()
+                            .addComponent(btn_item4)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(btn_item5)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(btn_item6))
+                        .addGroup(Card_BurgersLayout.createSequentialGroup()
+                            .addComponent(btn_item1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(btn_item2)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(btn_item3))))
                 .addContainerGap(951, Short.MAX_VALUE))
         );
 
@@ -704,7 +721,12 @@ public class View_POS extends javax.swing.JFrame {
         Panel_Employee_works.add(jButton4);
 
         jButton7.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jButton7.setText("Admin");
+        jButton7.setText("Online Order");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
         Panel_Employee_works.add(jButton7);
 
         jButton8.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
@@ -1049,6 +1071,14 @@ public class View_POS extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+       Panel_Cards.removeAll();
+       Panel_Cards.add(Card_OrderOnline);
+       Panel_Cards.repaint();
+       Panel_Cards.revalidate();
+    }//GEN-LAST:event_jButton7ActionPerformed
                                         
     /**
      * @param args the command line arguments
@@ -1092,6 +1122,7 @@ public class View_POS extends javax.swing.JFrame {
     private javax.swing.JPanel Card_Drinks;
     private javax.swing.JPanel Card_Extras;
     private javax.swing.JPanel Card_FoodMenu;
+    private javax.swing.JPanel Card_OrderOnline;
     private javax.swing.JPanel Panel_Background;
     private javax.swing.JPanel Panel_Buttons;
     private javax.swing.JPanel Panel_Cards;
