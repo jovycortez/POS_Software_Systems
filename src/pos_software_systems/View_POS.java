@@ -645,19 +645,18 @@ public class View_POS extends javax.swing.JFrame {
                 .addGroup(Card_BurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_item7)
                     .addComponent(lbl_Burgers)
-                    .addGroup(Card_BurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(Card_BurgersLayout.createSequentialGroup()
-                            .addComponent(btn_item4)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btn_item5)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btn_item6))
-                        .addGroup(Card_BurgersLayout.createSequentialGroup()
-                            .addComponent(btn_item1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btn_item2)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btn_item3))))
+                    .addGroup(Card_BurgersLayout.createSequentialGroup()
+                        .addComponent(btn_item4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_item5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_item6))
+                    .addGroup(Card_BurgersLayout.createSequentialGroup()
+                        .addComponent(btn_item1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_item2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_item3)))
                 .addContainerGap(951, Short.MAX_VALUE))
         );
 
@@ -703,7 +702,7 @@ public class View_POS extends javax.swing.JFrame {
         Panel_Employee_works.add(jButton5);
 
         jButton6.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jButton6.setText("Cashier Logged");
+        jButton6.setText("Cashier Logged update");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
